@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+div {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  background-color: black;
+  border-radius: 50px;
+  overflow: hidden;
+}
+div::before {
+  content: "Mahmoud AKl - Google Animation";
+  position: absolute;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background-color: whitesmoke;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+div::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: conic-gradient(
+    #fb4233 45deg,
+    #4189ff 45deg,
+    #4189ff 90deg,
+    #ffbc00 90deg,
+    #ffbc00 135deg,
+    green 135deg,
+    green 180deg,
+    #fb4233 180deg,
+    #fb4233 225deg,
+    #4189ff 225deg,
+    #4189ff 270deg,
+    #ffbc00 270deg,
+    #ffbc00 315deg,
+    green 315deg
+  );
+  margin-left: -25px;
+  margin-top: -150px;
+  animation: rotate 4s infinite linear;
+  -webkit-animation: rotate 4s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
